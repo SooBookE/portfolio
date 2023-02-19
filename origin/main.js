@@ -9,12 +9,12 @@ document.addEventListener("DOMContentLoaded", _ => {
   const on_scroll = (dom) => dom.classList.add("come-in")
   window.addEventListener('scroll', function () {
     scrollpos = window.scrollY;
-    if (scrollpos >= used.offsetHeight - 700) on_scroll(used)
+    if (scrollpos >= used.offsetHeight - 1600) on_scroll(used)
     // if (scrollpos >= projects.offsetHeight - 700) on_scroll(projects)
-    if (scrollpos >= about.offsetHeight + 1400) on_scroll(about)
-    if (scrollpos >= exper.offsetHeight + 1900) on_scroll(exper)
-    if (scrollpos >= awards.offsetHeight + 2500) on_scroll(awards)
-    if (scrollpos >= career.offsetHeight + 2800) on_scroll(career)
+    if (scrollpos >= about.offsetHeight + 2600) on_scroll(about)
+    if (scrollpos >= exper.offsetHeight + 3200) on_scroll(exper)
+    if (scrollpos >= awards.offsetHeight + 3700) on_scroll(awards)
+    if (scrollpos >= career.offsetHeight + 4000) on_scroll(career)
   })
 
   const ctx = document.getElementById('myChart');
@@ -53,4 +53,10 @@ document.addEventListener("DOMContentLoaded", _ => {
       }
     }
   });
+  const $topBtn = document.querySelector(".moveTopBtn");
+
+// 버튼 클릭 시 맨 위로 이동
+$topBtn.onclick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });  
+}
 })
