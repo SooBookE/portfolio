@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="author" content="SuHwan Kim">
+    <meta name="description" content="SuHwan Kim&#x27;s porfolio. You can appreciate some of works on my experience.">
+    <meta name="keywords"
+        content="SuHwan Kim, 김수환, portfolio, developer, web, vue, vue.js, vuejs, node, node.js, nodejs, tensorflow, tensorflow.js, tensorflowjs, mongodb, rdbms, nosql, mongoose, machine-learning, deep-learning, ai, html, css, js, javascript, ecmascript, front-end, back-end, full-stack, figma, ui, ux, ui/ux, ux/ui">
+    <meta name="Resource-type" content="Document">
+    <meta name="robots" content="ALL">
+    <meta property="og:title" content="김수환 포트폴리오 :: SuHwan Kim&#x27;s Portfolio" />
+    <meta property="og:description"
+        content="SuHwan Kim&#x27;s porfolio. You can appreciate some of works on my experience." />
+    <title>SuHwan Kim&#x27;s Portfolio</title>
+    <script src="https://kit.fontawesome.com/cbe76240f6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body onselectstart="return false">
+    <header>
+        <div class="filter">
+            <nav>
+                <div class="nav-wrapper">
+                    <h1 class="nav-logo">Suhwan Kim&#x27;s Portfolio</h1>
+                    <ul class="nav-menu">
+                        <li><a href="#used">Used</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#exper">Experiences</a></li>
+                        <li><a href="#awards">Awards</a></li>
+                        <li><a href="#career">Careers</a></li>
+                        <li><a href="https://github.com/soobooke" target="_blank" class="no-link"><i
+                                    class="fab fa-github" style="font-size:1.3em;"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="intro">
+                <h3>안녕하세요! <br><br>
+                    호기심 많은 개발자 <span>김수환</span>입니다.</h3>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <article class="art1">
+            <div class="used" data-anchor="used" id="used">
+                <div class="text-wrap animate-text ">
+                    <h2>Used tools</h2>
+                    <div class="container">
+                        <div class="cont1">Front-end
+                            <hr> <img src="./img/frontend.png" alt="">
+                        </div>
+                        <div class="cont2">Back-end
+                            <hr> <img src="./img/backend.png" alt="">
+                        </div>
+                        <div class="cont3">Data-Base
+                            <hr> <img src="./img/database.png" alt="">
+                        </div>
+                        <div class="cont4">A.I./M.L.
+                            <hr> <img src="./img/ai&ml.png" alt="">
+                        </div>
+                        <div class="cont5">Version Control
+                            <hr> <img src="./img/versioncontrol.png" alt="">
+                        </div>
+                        <div class="cont6">ETC
+                            <hr> <img src="./img/etc.png" alt="">
+                        </div>
+                    </div>
+                    <br>
+
+                    <canvas id="myChart"></canvas>
+
+                    <p class="text-intro">※ <mark>알림</mark></p>
+                    <p class="text-intro">위 차트는 "보유 기술력 활용 정도"에 따라</p>
+                    <div>4 - 대규모 프로그램 및 시스템을 참고사항(책/인터넷)없이 개발할 수 있으며, 일반적이지 않은 난해한 부분도 일부 참고를 통해 개발할 수 있음.</div>
+                    <div>3 - 중간규모 프로그램 및 시스템을 개발할수 있으며, 주요 이슈 트러블슈팅을 할 수 있을 정도로 내부구조에 대해 이해하고 있음.</div>
+                    <div>2 - 시스템 동작 방식을 알고 있으며, 기본적인 기능을 구현할 수 있음.</div>
+                    <div>1 - 코드를 읽을 수 있으며, 책을 참고하여 약간의 수정작업 또는 작은 변경사항 추가를 할 수 있음.</div>
+                    <div>0 - 경험/지식 없음.</div>
+                    <p class="text-intro" style="margin-top: 40px;">의 기준으로 작성했습니다.</p>
+                </div>
+            </div>
+        </article>
+        <article class="art2">
+            <div class="projects" data-anchor="projects" id="projects">
+                <div class="text-wrap">
+                    <h2>Projects</h2>
+                </div>
+                <ul class="project_li">
+                    <li class="project project-1 ripple load-bg">
+                        <a href="https://github.com/leesibin/KSMGeneralproject/tree/main"
+                            class="project-content" target="_blank">
+                            <h3 class="project-title"><span>명령 저장 텔레그램 봇</span></h3>
+                            <span class="project-underline"></span>
+                            <div class="project-description"><span>몽고DB로 명령 추가와 크롤링 기능을 갖춘 텔레그램 봇입니다.</span></div>
+                        </a>
+                    </li>
+                    <li class="project project-2 ripple load-bg">
+                        <a href="https://github.com/SooBookE/proj_4" class="project-content" target="_blank">
+                            <h3 class="project-title"><span>AI 통합 구현(Vue.js)</span></h3>
+                            <span class="project-underline"></span>
+                            <div class="project-description"><span>Vue.js로 구현한 TensorFlow.js AI 분석 모델입니다. </span></div>
+                        </a>
+                    </li>
+                    <li class="project project-3 ripple load-bg">
+                        <a href="https://github.com/SooBookE/proj_personal"
+                            class="project-content" target="_blank">
+                            <h3 class="project-title"><span>AI ChatBot(ChatGPT)</span></h3>
+                            <span class="project-underline"></span>
+                            <div class="project-description"><span>ChatGPT와 텔레그램 봇을 연동시킨 습작입니다. KoGPT도 사용해봤습니다.</span></div>
+                        </a>
+                    </li>
+                    <li class="project project-4 ripple load-bg">
+                        <a href="https://lucidcode.herokuapp.com/#/" class="project-content" target="_blank">
+                            <h3 class="project-title"><span>Lucid Codeforce</span></h3>
+                            <span class="project-underline"></span>
+                            <div class="project-description"><span>A system that quickly finds answers to Codeforce.</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project project-5 ripple load-bg">
+                        <a href="https://github.com/mochajs/mocha/graphs/contributors" class="project-content"
+                            target="_blank">
+                            <h3 class="project-title"><span>Mocha.js</span></h3>
+                            <span class="project-underline"></span>
+                            <div class="project-description"><span>Javascript Test Framework</span></div>
+                        </a>
+                    </li>
+                    <li class="project project-6 ripple load-bg">
+                        <a href="https://github.com/wnghdcjfe/thousand_wooo_app" class="project-content" target="_blank">
+                            <h3 class="project-title"><span>Solbang Notepad</span></h3>
+                            <span class="project-underline"></span>
+                            <div class="project-description"><span>Actor Chun Woo-hee's Notebook Page</span></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+        <article class="art3">
+            <div class="about" data-anchor="about" id="about">
+                <div class="text-wrap animate-text ">
+                    <h2>About Me</h2>
+                    <p class="text-intro"><strong>"안녕하세요! AI 전문가를 꿈꾸는 신입 개발자 <mark>김수환</mark>입니다."</strong></p>
+                    <p>IT 기술 선도에 이바지하는 프로그래머들을 줄곧 동경해왔습니다. 그들을 보며, <strong><mark>다가올 AI 시대에 수혜자로 그치지 않고, 흐름의 주역이 되고
+                                싶었습니다.</mark></strong> 그런 생각을 품은 후, 지금 저는 이 자리에 와 있습니다. 늦은 만큼 남들보다 더 열심히 개발을 배워가며
+                        성장하겠습니다. 제 행보를 지켜봐 주세요!</p>
+                </div>
+            </div>
+        </article>
+        <article class="art4">
+            <div class="exper" data-anchor="exper" id="exper">
+                <div class="text-wrap animate-text ">
+                    <h2>Experiences</h2>
+                    <p class="text-intro">"저는 <mark>이런 경험</mark>도 있습니다!"</p>
+                    <p>현장실습 활동( 2018.06 ~ 2018.08 ) : 산학협력업체 "이안이엔지"에서 촬영 이미지를 이용한 자동차 3D 모델링 구축 연구를 진행하고, 성과 보고를 실시함.</p>
+                    <p>캡스톤 디자인( 2018.09 ~ 한 학기 동안 ) : 아두이노를 활용한 적응형 IoT 수조 개발에 프로그래머로 참여함.</p>
+                    <p>COVID-19 방역( 2020.02 ~ 2021.11 ) : 펜데믹 기간 동안 각종 관공서와 교육기관에서 방역 작업을 수행함.</p>
+                </div>
+            </div>
+        </article>
+        <article class="art5">
+            <div class="awards" data-anchor="awards" id="awards">
+                <div class="text-wrap animate-text">
+                    <h2>Awards</h2>
+                    <br>
+                    <br>
+                    <p>alert("페이지 공사 중입니다!")</p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </article>
+        <article class="art6">
+            <div class="career" data-anchor="career" id="career">
+                <div class="text-wrap animate-text">
+                    <h2>Careers</h2>
+                    <br>
+                    <br>
+                    <p>여러분과 쌓아 나가고 싶습니다!!</p>
+                    <br>
+                    <br>
+                </div>
+            </div>
+        </article>
+    </main>
+</body>
+
+</html>
