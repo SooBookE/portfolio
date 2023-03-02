@@ -6,9 +6,41 @@ document.addEventListener("DOMContentLoaded", _ => {
   const exper = document.querySelector("#exper > div")
   const awards = document.querySelector("#awards > div")
   const career = document.querySelector("#career > div")
+  const nav_wrapper = document.querySelector('.nav-wrapper')
   const on_scroll = (dom) => dom.classList.add("come-in")
+
+  /* resize로 style을 넣으면, 단말기에서 바로 켰을 때 적용 안 될 수도..?
+  그냥 CSS로 조절하자! */
+
+  // const body = document.querySelector("body")
+  // const menu = document.querySelector(".nav-menu")
+  // const hamburger = document.querySelector(".menu")
+  // window.addEventListener("resize", function(){
+  //   /* 방법1 */
+  //   // body.offsetWidth <= 820? (()=>{menu.style.display="none";hamburger.style.display='block'})():(()=>{menu.style.display="block";hamburger.style.display='none'})()
+  //   /* 방법2 */
+  //   // nav_wrapper.offsetWidth <= 820? (menu.style.display="none",hamburger.style.display='block'):(menu.style.display="block",hamburger.style.display='none')
+  //   /* 방법3 */
+  //   // nav_wrapper.offsetWidth <= 820? (()=>{menu.style.display="none";hamburger.style.display='block'})():(()=>{menu.style.display="block";hamburger.style.display='none'})()
+  // })
+  const intro = document.querySelector(".intro>h3");
+  if (nav_wrapper.offsetWidth <= 820) {
+    intro.style['margin-top'] = '70px'
+  }
+  window.addEventListener("resize", function () {
+    if (nav_wrapper.offsetWidth <= 820) {
+      intro.style['margin-top'] = '70px'
+    }else{
+      intro.style['margin'] = 'auto'
+    }
+  })
   window.addEventListener('scroll', function () {
     scrollpos = window.scrollY;
+    if (nav_wrapper.offsetWidth >= 820) {
+      scrollpos >= nav_wrapper.offsetHeight - 40 ? (() => { nav_wrapper.classList.add("fix"); intro.style["margin-top"] = "70px" })() : (() => { nav_wrapper.classList.remove("fix"); intro.style['margin-top'] = 'auto' })();
+    } else {
+      scrollpos >= nav_wrapper.offsetHeight - 70 ? (() => { nav_wrapper.classList.add("fix"); })() : (() => { nav_wrapper.classList.remove("fix"); })();
+    }
     if (scrollpos >= used.offsetHeight - 1600) on_scroll(used)
     // if (scrollpos >= projects.offsetHeight - 700) on_scroll(projects)
     if (scrollpos >= about.offsetHeight + 2600) on_scroll(about)
@@ -21,7 +53,7 @@ document.addEventListener("DOMContentLoaded", _ => {
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: ['HTML/CSS/JS', 'Vue.js', 'Node.js', 'MongoDB/Mongoose', 'TensorFlow.js', 'Git/GitHub', 'Figma','AdobeIllustrator','AdobePhotoshop'],
+      labels: ['HTML/CSS/JS', 'Vue.js', 'Node.js', 'MongoDB/Mongoose', 'TensorFlow.js', 'Git/GitHub', 'Figma', 'AdobeIllustrator', 'AdobePhotoshop'],
       datasets: [{
         label: '보유 기술력 활용 정도',
         data: [3, 3, 2, 3, 2, 2, 2, 2, 2],
@@ -55,8 +87,8 @@ document.addEventListener("DOMContentLoaded", _ => {
   });
   const $topBtn = document.querySelector(".moveTopBtn");
 
-// 버튼 클릭 시 맨 위로 이동
-$topBtn.onclick = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });  
-}
+  // 버튼 클릭 시 맨 위로 이동
+  $topBtn.onclick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 })
