@@ -269,8 +269,7 @@ a.project-content {
     position: relative
 }
 
-.project-description span,
-.project-title span {
+.project-description span{
     -webkit-transform: translateY(125%);
     -moz-transform: translateY(125%);
     -ms-transform: translateY(125%);
@@ -294,9 +293,8 @@ a.project-content {
 }
 
 .project.active .project-description span,
-.project.active .project-title span,
-.project:not(.no-hover):hover .project-description span,
-.project:not(.no-hover):hover .project-title span {
+.project:not(.no-hover):hover .project-description span
+ {
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
